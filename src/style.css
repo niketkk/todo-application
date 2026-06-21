@@ -1,0 +1,24 @@
+.header-wrapper {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+.todo-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.todo-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
