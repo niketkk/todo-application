@@ -3,18 +3,22 @@ import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
-  function addTodo(newTodo) {
-    setTodos([...todos, newTodo]);
+  function addTask(text) {
+    const newTask = {
+      id: Date.now(),
+      text: text,
+    };
+    setTasks([...tasks, newTask]);
   }
 
   return (
-    <>
+    <div>
       <h1>Tawsk Manager</h1>
-      <TodoInput addTodo={addTodo} />
-      <TodoList todos={todos} />
-    </>
+      <TodoInput addTask={addTask} />
+      <TodoList tasks={tasks} />
+    </div>
   );
 }
 

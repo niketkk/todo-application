@@ -1,7 +1,13 @@
-function TodoList() {
+import "../style.css";
+
+function TodoList({ tasks }) {
   return (
     <div>
-      <p>No tasks yet</p>
+      <ul>
+        {tasks.map((task) => (
+          <li key={task.id}>{task.text}</li>
+        ))}
+      </ul>
     </div>
   );
 }
