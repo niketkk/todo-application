@@ -10,12 +10,11 @@ function App() {
       id: Date.now(),
       text: text,
     };
-    setTasks([...tasks, newTask]);
+    setTasks((prevTasks) => [...prevTasks, newTask]);
   }
 
   function deleteTask(id) {
-    const updatedTasks = tasks.filter((task) => task.id !== id);
-    setTasks(updatedTasks);
+    setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
   }
 
   return (
