@@ -13,11 +13,16 @@ function App() {
     setTasks([...tasks, newTask]);
   }
 
+  function deleteTask(id) {
+    const updatedTasks = tasks.filter((task) => task.id !== id);
+    setTasks(updatedTasks);
+  }
+
   return (
     <div>
       <h1>Tawsk Manager</h1>
       <TodoInput addTask={addTask} />
-      <TodoList tasks={tasks} />
+      <TodoList tasks={tasks} deleteTask={deleteTask} />
     </div>
   );
 }
